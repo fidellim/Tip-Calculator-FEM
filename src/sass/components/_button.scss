@@ -1,0 +1,68 @@
+.tip {
+	background-color: $veryDarkCyan;
+	color: $white;
+	max-width: 9rem;
+	width: 100%;
+	cursor: pointer;
+}
+
+.tip.selected {
+	background-color: $strongCyan;
+	color: $veryDarkCyan;
+}
+
+.tip.selected:hover {
+	background-color: $strongCyan;
+}
+
+.tip:hover {
+	color: $veryDarkCyan;
+}
+
+.tip:active {
+	// background-color: $strongCyan !important;
+	transform: scale(0.98);
+}
+
+.noReset,
+.allowReset {
+	color: $veryDarkCyan;
+}
+
+.allowReset {
+	cursor: pointer;
+	background-color: $strongCyan;
+
+	&:active {
+		transform: scale(0.98);
+	}
+}
+
+.noReset {
+	background-color: hsl(183, 69%, 26%);
+	cursor: not-allowed;
+}
+
+.noReset:hover {
+	background-color: hsl(183, 69%, 26%) !important;
+}
+
+.tip,
+.reset {
+	border-radius: 5px;
+	padding: 0.5rem 0;
+	font-size: 1.5rem;
+	text-align: center;
+	font-weight: 700;
+}
+
+.tip:hover,
+.reset:hover {
+	background-color: $lightCyan;
+}
+
+@media (min-width: 975px) {
+	.tip {
+		max-width: 8rem;
+	}
+}

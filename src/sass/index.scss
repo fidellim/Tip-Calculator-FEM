@@ -1,0 +1,18 @@
+@import "abstract/variables";
+
+@import "components/button";
+@import "components/calculator";
+@import "components/app";
+
+@import "base/reset";
+@import "base/typography";
+
+body {
+	background-color: $lightGrayishCyan;
+	font-size: 24px;
+}
+
+* {
+	font-family: $SpaceMono;
+	outline: 0;
+}

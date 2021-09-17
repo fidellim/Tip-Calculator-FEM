@@ -1,0 +1,10 @@
+@media (min-width: 975px) {
+	.app {
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+	}
+}
