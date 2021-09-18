@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://your-solution-url.com)
-- Live Site URL: [Live Site](https://your-live-site-url.com)
+- Solution URL: [Solution](https://github.com/fidellim/Tip-Calculator-FEM)
+- Live Site URL: [Live Site](https://fidellim-tip-calculator-fem.netlify.app/)
 
 ## My process
 
@@ -44,11 +44,12 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+- Progressive Web App (PWA)
 - [React](https://reactjs.org/) - JS library
 
 ### What I learned
 
-Practiced applying multiple ternary operators.
+Practiced applying multiple ternary operators. Also, I was able to build my first PWA.
 
 ```js
 className = {type === 'tip' && isToggled ?
@@ -57,13 +58,23 @@ className = {type === 'tip' && isToggled ?
                         'tip' : `reset ${type}`}
 ```
 
+Command used to create a react app with service worker files
+
+```cmd
+npx create-react-app your-app-name --template cra-template-pwa
+```
+
 ### Continued development
 
 To be able to create more Progressive Web Apps. Then, to be comfortable at making apps using React.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [Remaining files for PWA](https://dev.to/myfatemi04/turn-your-create-react-app-into-a-progressive-web-app-in-100-seconds-3c11) - This will help you create your first PWA using React. If you have created React using this command "npx create-react-app my-app", then this reference will guide you to include the remaining files needed.
+
+- [Create PWA](https://www.youtube.com/watch?v=WbbAPfDVqfY) - This will help you understand briefly what PWA is. Also, it will teach you on how to make your app into a PWA
+
+- [React app to PWA](https://www.youtube.com/watch?v=MMXKjrBWgPo) - If you are using React as your framework for your app, you can use this link to watch on how to convert your app to a PWA.
 
 ## Author
 
