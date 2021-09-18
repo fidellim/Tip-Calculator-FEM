@@ -196,11 +196,21 @@ input[type="number"] {
 		color: $strongCyan;
 		justify-self: flex-end;
 		align-self: center;
+		font-size: 2rem;
 	}
 }
 
 .tipPerson {
 	margin-bottom: 2rem;
+}
+
+@media (min-width: 500px) {
+	.tipAmount,
+	.tipPerson {
+		> :nth-child(3) {
+			font-size: 3rem;
+		}
+	}
 }
 
 @media (min-width: 975px) {
