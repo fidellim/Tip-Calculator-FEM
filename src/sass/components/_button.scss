@@ -47,6 +47,10 @@
 	background-color: hsl(183, 69%, 26%) !important;
 }
 
+.reset {
+	width: calc(100% - 4rem);
+}
+
 .tip,
 .reset {
 	border-radius: 5px;
@@ -54,6 +58,7 @@
 	font-size: 1.5rem;
 	text-align: center;
 	font-weight: 700;
+	border: 0;
 }
 
 .tip:hover,

@@ -50,6 +50,7 @@ const Calculator = () => {
 
     // selecting of buttons
     const handleFixTips = (value, index) => {
+        
         setFixTips(
             fixTips.map((fixTip, i) => {
                 // check if user resets the tip calculator
@@ -114,15 +115,15 @@ const Calculator = () => {
     return (
         <div className="container">
             <div className="col">
-                <form>
-                    <label htmlFor="bill">Bill</label>
+                <form onSubmit={e => e.preventDefault()}>
+                    <h1><label htmlFor="bill" className="title">Bill</label></h1>
                     <div className="billContainer">
-                        <h5 className={bill < 1 && bill ? "errorBill" : "errorBill hide"}>
+                        <h2 className={bill < 1 && bill ? "errorBill" : "errorBill hide"}>
                             {parseInt(bill) === 0 ? "Can't be zero" : "Can't be negative"}
-                        </h5>
+                        </h2>
                         <input type="number" id="bill" className={bill < 1 && bill ? "error" : null}placeholder="0" value={bill} onChange={handleBill}/>
                     </div>
-                    <h5>Select Tip %</h5>
+                    <h1 className="title">Select Tip %</h1>
                     <div className="tips">
                         {fixTips.map((tip,index) => {
                             return (
@@ -134,11 +135,11 @@ const Calculator = () => {
                         {/* unPress fix tips when custom tip is pressed */}
                         <input type="number" id="custom" className={custom < 1 && custom ? "error" : null}placeholder="Custom" value={custom} onChange={handleCustom} onClick={unPressFixTips}/>
                     </div>
-                    <label htmlFor="peopleCounter">Number of People</label>
+                    <h1><label htmlFor="peopleCounter" className="title">Number of People</label></h1>
                     <div className="peopleCounterContainer">
-                        <h5 className={people < 1 && people ? "errorPeople" : "errorPeople hide"}>
+                        <h2 className={people < 1 && people ? "errorPeople" : "errorPeople hide"}>
                             {parseInt(people) === 0 ? "Can't be zero" : "Can't be negative"}
-                        </h5>
+                        </h2>
                         <input type="number" id="peopleCounter" className={people < 1 && people ? "error" : null} placeholder="0" value={people} onChange={handlePeople}/>
                     </div>
                 </form>
@@ -146,14 +147,14 @@ const Calculator = () => {
             <div className="col">
                 <div className="tipResult">
                     <div className="tipAmount">
-                        <h5>Tip Amount</h5>
-                        <h5>/ person</h5>
-                        <h1>${tipPerPerson}</h1>
+                        <h2>Tip Amount</h2>
+                        <h2>/ person</h2>
+                        <strong>${tipPerPerson}</strong>
                     </div>
                     <div className="tipPerson">
-                        <h5>Total</h5>
-                        <h5>/ person</h5>
-                        <h1>${totalPerPerson}</h1>
+                        <h2>Total</h2>
+                        <h2>/ person</h2>
+                        <strong>${totalPerPerson}</strong>
                     </div>
                     <Button key='reset' type={reset} value="reset" handle={handleReset}/>
                 </div>

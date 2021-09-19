@@ -14,8 +14,7 @@ label {
 	display: block;
 }
 
-label,
-form h5 {
+.title {
 	text-align: start;
 	color: $darkGrayishCyan;
 	font-weight: 700;
@@ -151,14 +150,17 @@ input[type="number"] {
 	top: 0;
 	right: 0;
 	color: $scarlett;
+	font-size: 1.25rem;
 	opacity: 1;
-	transform: translateY(-2.5rem);
+	visibility: visible;
+	transform: translateY(-2.25rem);
 	transition: all 0.3s ease;
 }
 
 .errorPeople.hide,
 .errorBill.hide {
 	opacity: 0;
+	visibility: hidden;
 }
 
 .tipResult {
@@ -173,6 +175,10 @@ input[type="number"] {
 	padding: 1rem 0;
 	grid-template-columns: repeat(2, auto);
 	grid-template-rows: repeat(2, auto);
+
+	h2 {
+		font-size: 1.25rem;
+	}
 
 	> :nth-child(1) {
 		grid-column: 1 / span 1;
